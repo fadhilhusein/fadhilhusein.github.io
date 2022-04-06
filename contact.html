@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Griya Zahwa / Lomba</title>
+</head>
+<body>
+    <header>
+        <div class="brand"><a href="index.html"><span>GRIYA ZAHWA</span> BAKERY</a></div>
+        <div class="hamburger"><div class="bar"></div></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li class="current"><a href="contact.html">Contact</a></li>
+            </ul>
+    </header>
+
+    <section id="contact">
+        <div class="kontak container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h3>CONTACT US</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="phone" placeholder="Phone number" required>
+                <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="./app2.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "idethicalhack@gmail.com",
+            Password : "qqqaeqaoqlkhuxqd",
+            To : 'muhammad.fadhil.syahrian@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact Form Enquiry",
+            Body : "Name: " + document.getElementById('name').value
+                + "<br> Email :" + document.getElementById('email').value
+                + "<br> Phone Number :" + document.getElementById('phone').value
+                + "<br> Message :" + document.getElementById('message').value
+        }).then(
+        message => alert("Message sent succesfully")
+        );
+        }
+    </script>
+</body>
+</html>
