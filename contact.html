@@ -23,7 +23,7 @@
     <!-- Contact -->
     <section id="contact">
         <div class="kontak container">
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form onsubmit="sendEmail(); reset(); false;">
                 <h3>CONTACT US</h3>
                 <input type="text" id="name" placeholder="Your Name" required>
                 <input type="email" id="email" placeholder="Email" required>
@@ -31,6 +31,34 @@
                 <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
                 <button type="submit">Submit</button>
             </form>
+        </div>
+    </section>
+
+    <section id="order">
+        <div class="title">
+            <h1>ORDER</h1>
+        </div>
+        <div class="order container">           
+            <div class="main">
+                <div class="card" onclick="location.href = 'https://web.whatsapp.com/'">
+                    <div class="logo">
+                        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/>
+                    </div>
+                    <div class="text">
+                        <h2>WHATSAPP</h2>
+                        <span>+62 857-2360-0363</span>
+                    </div>
+                </div>
+                <div class="card" onclick="location.href = 'https://www.instagram.com/griyazahwacake';">
+                    <div class="logo">
+                        <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/>
+                    </div>
+                    <div class="text">
+                        <h2>INSTAGRAM</h2>
+                        <span>@GriyaZahwa</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -63,7 +91,6 @@
                     </li>
                     <li><span>Address:</span><br>
                         <a href="#">Medang Lestari, JL Alam Indah IV
-                            Blok BII/J15
                         </a>
                     </li>
                 </ul>
